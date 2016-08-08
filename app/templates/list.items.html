@@ -1,0 +1,12 @@
+<div>
+    <md-button ng-click="removeSelected()">Remove selected</md-button>
+    <md-list ui-sortable="sortableOptions" ng-model="itemsList">
+        <md-list-item ng-repeat="item in itemsList">
+            <p>{{item.text}}</p>
+            <md-checkbox ng-model="item.selected" class="md-secondary"></md-checkbox>
+
+            <md-button ng-click="removeItemFromList(item)" class="md-secondary">Remove</md-button>
+            <md-button ng-click="editItem($event, item)" class="md-secondary">Edit</md-button>
+        </md-list-item>
+    </md-list>
+</div>
